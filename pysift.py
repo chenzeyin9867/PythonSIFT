@@ -104,6 +104,7 @@ def findScaleSpaceExtrema(gaussian_images, dog_images, num_intervals, sigma, ima
     keypoints = []
 
     for octave_index, dog_images_in_octave in enumerate(dog_images):
+        print(octave_index)
         for image_index, (first_image, second_image, third_image) in enumerate(zip(dog_images_in_octave, dog_images_in_octave[1:], dog_images_in_octave[2:])):
             # (i, j) is the center of the 3x3 array
             for i in range(image_border_width, first_image.shape[0] - image_border_width):
